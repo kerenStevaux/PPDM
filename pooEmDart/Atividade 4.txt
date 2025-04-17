@@ -1,0 +1,23 @@
+Atividade 4
+class Aluno {
+  String nome;
+  double nota1;
+  double nota2;
+
+  Aluno(this.nome, this.nota1, this.nota2);
+
+  double media() => (nota1 + nota2) / 2;
+}
+
+void main() {
+  List<Aluno> alunos = [
+    Aluno("Ana", 7.0, 8.0),
+    Aluno("Pedro", 5.5, 4.0),
+    Aluno("Lucas", 6.0, 6.0),
+  ];
+
+  for (var aluno in alunos) {
+    double m = aluno.media();
+    print("${aluno.nome} - Média: $m - ${m >= 6.0 ? "Aprovado" : "Reprovado"}");
+  }
+}

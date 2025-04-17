@@ -1,0 +1,29 @@
+Atividade 2
+class ContaBancaria {
+  String _titular = "";
+  double _saldo = 0.0;
+
+  String get titular => _titular;
+  double get saldo => _saldo;
+
+  set titular(String valor) {
+    _titular = valor;
+  }
+
+  set saldo(double valor) {
+    if (valor >= 0) {
+      _saldo = valor;
+    } else {
+      print("Saldo não pode ser negativo.");
+    }
+  }
+}
+
+void main() {
+  ContaBancaria conta = ContaBancaria();
+  conta.titular = "João";
+  conta.saldo = 100.0;
+
+  print("Titular: ${conta.titular}");
+  print("Saldo: ${conta.saldo}");
+}

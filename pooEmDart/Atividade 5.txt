@@ -1,0 +1,34 @@
+Atividade 5 
+class Retangulo {
+  double _largura = 0.0;
+  double _altura = 0.0;
+
+  double get largura => _largura;
+  double get altura => _altura;
+
+  set largura(double valor) {
+    if (valor > 0) {
+      _largura = valor;
+    } else {
+      print("Largura deve ser positiva.");
+    }
+  }
+
+  set altura(double valor) {
+    if (valor > 0) {
+      _altura = valor;
+    } else {
+      print("Altura deve ser positiva.");
+    }
+  }
+
+  double calcularArea() => _largura * _altura;
+}
+
+void main() {
+  Retangulo r = Retangulo();
+  r.largura = 5.0;
+  r.altura = 3.0;
+
+  print("Área do retângulo: ${r.calcularArea()}");
+}

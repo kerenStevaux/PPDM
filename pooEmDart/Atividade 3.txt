@@ -1,0 +1,29 @@
+Atividade 3 
+class Funcionario {
+  String _nome = "";
+  double _salario = 0.0;
+
+  String get nome => _nome;
+  double get salario => _salario;
+
+  set nome(String valor) {
+    _nome = valor;
+  }
+
+  set salario(double valor) {
+    if (valor > 0) {
+      _salario = valor;
+    } else {
+      print("Salário deve ser positivo.");
+    }
+  }
+}
+
+void main() {
+  Funcionario f = Funcionario();
+  f.nome = "Maria";
+  f.salario = -1000; // Deve exibir mensagem de erro
+
+  print("Nome: ${f.nome}");
+  print("Salário: ${f.salario}");
+}

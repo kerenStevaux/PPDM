@@ -1,0 +1,20 @@
+Atividade 1
+class Produto {
+  String nome;
+  double preco;
+
+  Produto(); // Construtor padrão
+
+  Produto.nomeado(this.nome, this.preco); // Construtor nomeado
+}
+
+void main() {
+  Produto p1 = Produto();
+  p1.nome = "Caneta";
+  p1.preco = 2.5;
+
+  Produto p2 = Produto.nomeado("Caderno", 15.0);
+
+  print("Produto 1: ${p1.nome}, Preço: ${p1.preco}");
+  print("Produto 2: ${p2.nome}, Preço: ${p2.preco}");
+}
